@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, background-image 1s ease; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #B0E0E6, #4682B4);
+}
+
+.dashboard {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+input, button {
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out; 
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+
+#weather {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Background colors for weather conditions */
+body.sunny {
+    background: linear-gradient(to bottom, #FFD700, #87CEEB); 
+    background-size: cover;
+}
+
+body.cloudy {
+    background: linear-gradient(to bottom, #B0C4DE, #A9A9A9);
+}
+
+body.rainy {
+    background: linear-gradient(to bottom, #708090, #2F4F4F); 
+    background-size: cover;
+}
+
+body.default {
+    background: linear-gradient(to bottom, #B0E0E6, #4682B4); 
+    background-size: cover;
+}
+
+
+#icon {
+    width: 120px; 
+    height: 120px;
+    transition: transform 0.3s ease; 
+}
+
+h1, h2 {
+    color: #333;
+    font-weight: bold; 
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5; 
+
+}
+@media (max-width: 600px) {
+    .dashboard {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
